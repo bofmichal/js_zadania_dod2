@@ -24,3 +24,25 @@ function tablica2(){
         console.log(tab2);
         document.getElementById("tab2").innerHTML = tab2;
 }
+//zad3
+function tablica3(){
+    var tab3=[];
+    for (var i = 0; i < 10; ++i) {
+        tab3[i] = 1 + Math.floor(Math.random() * (i*10));
+        }
+        console.log(tab3);
+        document.getElementById("tab3").innerHTML = tab3;
+}
+//zad4
+var tab4=[];
+function tablica4(){    
+    for (var i = 0; i < 10; ++i) {
+        tab4[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab4);
+        document.getElementById("tab4").innerHTML = tab4;
+}
+function spr(){
+    var spr=tab4;
+    var paramx=parseFloat(document.getElementById("parax").value);
+}
