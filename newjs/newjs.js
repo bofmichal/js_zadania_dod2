@@ -43,6 +43,17 @@ function tablica4(){
         document.getElementById("tab4").innerHTML = tab4;
 }
 function spr(){
-    var spr=tab4;
-    var paramx=parseFloat(document.getElementById("parax").value);
+    var spra=tab4;
+    var paramx=parseFloat(document.getElementById("paramx").value);
+    var wystepuje = spra.indexOf(paramx) !== -1;
+    var gdzie = spra.indexOf(paramx);
+console.log(wystepuje);
+console.log(gdzie);
+if(wystepuje!== -1){
+document.getElementById("sprawdzx").innerHTML = "występuje na pozycji: "+gdzie;
 }
+if(wystepuje == false){
+    document.getElementById("sprawdzx").innerHTML = "nie występuje";  
+}
+}
+//sprw drugi sposob z for i if wyk 03 str 12
