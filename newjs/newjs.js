@@ -56,4 +56,46 @@ if(wystepuje == false){
     document.getElementById("sprawdzx").innerHTML = "nie występuje";  
 }
 }
-//sprw drugi sposob z for i if wyk 03 str 12
+//drugi sposob oraz podobne zad6
+/*function spr(){
+    var spra=tab4;
+    var szukaj = parseFloat(document.getElementById("paramx").value);
+var znalezione;
+for (var i = 0; i < spra.length; ++i) {
+if (spra[i] === szukaj) {
+znalezione = i;
+break;
+}
+}
+console.log(spra);
+if (isNaN(znalezione)) {
+console.log("nie znaleziono!");
+}
+else {
+console.log("znaleziono na pozycji: " + znalezione);
+}
+}*/
+//zad5
+var tab5=[];
+function tablica5(){    
+    for (var i = 0; i < 10; ++i) {
+        tab5[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab5);
+        document.getElementById("tab5").innerHTML = tab5;
+}
+function spr2(){
+    var spra=tab5;
+    var paramx=parseFloat(document.getElementById("paramx2").value);
+    var wystepuje = spra.indexOf(paramx) !== -1;
+    var gdzie = spra.indexOf(paramx);
+console.log(wystepuje);
+console.log(gdzie);
+if(wystepuje == true){
+document.getElementById("sprawdzx2").innerHTML = "występuje na pozycji: "+gdzie;
+}
+if(wystepuje == false){
+    document.getElementById("sprawdzx2").innerHTML = "nie występuje";  
+}
+}
+//zad7
