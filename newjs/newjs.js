@@ -99,3 +99,44 @@ if(wystepuje == false){
 }
 }
 //zad7
+var tab7=[];
+function tablica7(){    
+    for (var i = 0; i < 10; ++i) {
+        tab7[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab7);
+        document.getElementById("tab7").innerHTML = tab7;
+}
+function spr3(){
+    var spra=tab7;
+    var szukaj = parseFloat(document.getElementById("paramx3").value);
+var znalezione=[];
+var ilosc = 0;
+var str="";
+for (var i = 0; i < spra.length; ++i) {
+if (spra[i] === szukaj) {
+    ilosc++;
+znalezione[i] = " "+i+" ";
+str+=i+", ";
+
+    if(ilosc==0){
+        console.log("nie znaleziono!");
+    }
+    else {
+        console.log("znaleziono na pozycji: " + znalezione);
+        console.log(str);
+    }
+    }
+}
+
+console.log(spra);
+console.log(ilosc);
+document.getElementById("sprawdzx3").innerHTML="znaleziono w liczbie: "+ilosc+" ,na pozycji: "+str;
+}
+/*if (isNaN(znalezione)) {
+console.log("nie znaleziono!");
+}
+else {
+console.log("znaleziono na pozycji: " + znalezione + " w ilości: "+ ilosc);
+}
+}*///zrobic na ktorych pozycjach
