@@ -133,10 +133,32 @@ console.log(spra);
 console.log(ilosc);
 document.getElementById("sprawdzx3").innerHTML="znaleziono w liczbie: "+ilosc+" ,na pozycji: "+str;
 }
-/*if (isNaN(znalezione)) {
-console.log("nie znaleziono!");
+//zad 10
+var tab10=[];
+function tablica10(){    
+    for (var i = 0; i < 10; ++i) {
+        tab10[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab10);
+        document.getElementById("tab10").innerHTML = tab10;
 }
-else {
-console.log("znaleziono na pozycji: " + znalezione + " w ilości: "+ ilosc);
+function spr10(){
+    var spra=tab10;
+    var paramx=parseFloat(document.getElementById("paramx10").value);
+    var gdzie; 
+
+for (var i = 0; i < spra.length; ++i) {
+if(spra[i]%paramx==0){
+    gdzie=i;
+    console.log(gdzie);
+    console.log(spra[i]);
+    document.getElementById("sprawdzx10").innerHTML = spra[i] + ", która występuje na pozycji: "+gdzie;
+    break;
+    }
+    else {
+        console.log("nie wystepuje");
+        document.getElementById("sprawdzx10").innerHTML ="nie wystepuje";
+       break; 
+    }
 }
-}*///zrobic na ktorych pozycjach
+}
