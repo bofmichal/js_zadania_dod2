@@ -162,3 +162,32 @@ if(spra[i]%paramx==0){
     }
 }
 }
+//zad11
+var tab11=[];
+function tablica11(){    
+    for (var i = 0; i < 10; ++i) {
+        tab11[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab11);
+        document.getElementById("tab11").innerHTML = tab11;
+}
+function spr11(){
+    var spra=tab11;
+    var paramx=parseFloat(document.getElementById("paramx11").value);
+    var gdzie; 
+
+for (var i = 0; i <spra.length ; ++i) {
+if(spra[i]%paramx!=0){
+    gdzie=i;
+    console.log(gdzie);
+    console.log(spra[i]);
+    document.getElementById("sprawdzx11").innerHTML = spra[i] + ", która występuje na pozycji: "+gdzie;
+    //break;
+    }
+    else {
+        console.log("nie wystepuje");
+        document.getElementById("sprawdzx11").innerHTML ="nie wystepuje";
+        //break; 
+    }
+}
+}
