@@ -191,3 +191,49 @@ if(spra[i]%paramx!=0){
     }
 }
 }
+//zad12
+var tab12=[];
+function tablica12(){    
+    for (var i = 0; i < 10; ++i) {
+        tab12[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab12);
+        document.getElementById("tab12").innerHTML = tab12;
+}
+function spr12(){
+    var spra=tab12;
+    var paramx=parseFloat(document.getElementById("paramx12").value);    
+    function podzielna(value){
+        return (value%paramx==0)
+    }
+    var asad = spra.filter(podzielna);
+    console.log(asad);
+    document.getElementById("sprawdzx12").innerHTML = asad;
+
+}
+//zad13
+var tab13=[];
+function tablica13(){    
+    for (var i = 0; i < 10; ++i) {
+        tab13[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab13);
+        document.getElementById("tab13").innerHTML = tab13;
+}
+function spr13(){
+    var spra=tab13;    
+    var max = Number.MIN_VALUE; // albo max = ar[0]
+    var maxi; // maxi = 0
+    for (var i = 0; i < spra.length; ++i) {
+    if (spra[i] > max ) {
+        if (spra[i] %2==0 ) {
+    max = spra[i];
+    maxi = i;
+        }
+    //break;
+    }
+    }
+    console.log(max);
+    console.log("wartosc najwieksza: " + max + " na pozycji " + maxi);
+    document.getElementById("sprawdzx13").innerHTML = max + " na pozycji " + maxi;
+}
