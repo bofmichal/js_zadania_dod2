@@ -237,3 +237,47 @@ function spr13(){
     console.log("wartosc najwieksza: " + max + " na pozycji " + maxi);
     document.getElementById("sprawdzx13").innerHTML = max + " na pozycji " + maxi;
 }
+//zad14
+var tab14=[];
+function tablica14(){    
+    for (var i = 0; i < 10; ++i) {
+        tab14[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab14);
+        document.getElementById("tab14").innerHTML = tab14;
+}
+function spr14(){
+    var spra=tab14;    
+    var min = Number.MAX_VALUE;
+    var mina = Number.MAX_VALUE;
+    var mini;
+    var minia;
+    var minimi; 
+    var miniami;
+    for (var i = 0; i < spra.length; ++i) {
+    if (spra[i] < min) {
+           
+    min = spra[i];
+    mini = (i+1);
+    minimi=i   
+    }
+    }
+    
+    console.log(min);
+    console.log("wartosc najniejsza: " + min + " na pozycji " + minimi);
+    document.getElementById("sprawdzx14a").innerHTML = min + " na pozycji " + minimi;
+    for(var i = 0; i < 10; i++)                 
+    {                                           
+        if(spra[i] != spra[(mini-1)])                    
+        {                                       
+            if(spra[i] < mina)                                 
+                {
+                    mina = spra[i];
+                    minia = (i+1);
+                    miniami=i;
+                }
+        }
+    }
+    console.log(mina);
+    document.getElementById("sprawdzx14").innerHTML = mina + " na pozycji " + miniami;
+}
