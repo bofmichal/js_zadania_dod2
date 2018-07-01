@@ -281,3 +281,36 @@ function spr14(){
     console.log(mina);
     document.getElementById("sprawdzx14").innerHTML = mina + " na pozycji " + miniami;
 }
+//zad15
+var tab15=[];
+function tablica15(){    
+    for (var i = 0; i < 10; ++i) {
+        tab15[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab15);
+        document.getElementById("tab15").innerHTML = tab15;
+}
+function spr15(){
+    var spra=tab15;    
+    var max = Number.MIN_VALUE; 
+    var ile=0; 
+    var maxi;
+    for (var i = 0; i < spra.length; ++i) {
+    if (spra[i] > max ) {        
+    max = spra[i];
+    maxi=i;
+        
+    }
+}
+for (var i = 0; i < spra.length; ++i) {
+    if (spra[i] == spra[maxi] ) {        
+        ile++;
+            
+        }
+    }
+    console.log(maxi);
+    console.log(max);
+    console.log(ile);    
+    console.log("wartosc najwieksza: " + max + " w ilości: " + ile);
+    document.getElementById("sprawdzx15").innerHTML = max + " w ilości: " + ile;
+}
