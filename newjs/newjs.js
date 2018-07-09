@@ -295,17 +295,15 @@ function spr15(){
     var max = Number.MIN_VALUE; 
     var ile=0; 
     var maxi;
-    for (var i = 0; i < spra.length; ++i) {
+for (var i = 0; i < spra.length; ++i) {
     if (spra[i] > max ) {        
     max = spra[i];
-    maxi=i;
-        
+    maxi=i;       
     }
 }
 for (var i = 0; i < spra.length; ++i) {
     if (spra[i] == spra[maxi] ) {        
-        ile++;
-            
+        ile++;            
         }
     }
     console.log(maxi);
@@ -313,4 +311,41 @@ for (var i = 0; i < spra.length; ++i) {
     console.log(ile);    
     console.log("wartosc najwieksza: " + max + " w ilości: " + ile);
     document.getElementById("sprawdzx15").innerHTML = max + " w ilości: " + ile;
+}
+//zad16
+var tab16=[];
+function tablica16(){    
+    for (var i = 0; i < 10; ++i) {
+        tab16[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab16);
+        document.getElementById("tab16").innerHTML = tab16;
+}
+function spr16(){
+    var spra=tab16;    
+    var min = Number.MAX_VALUE;     
+    var mini;
+    var ar=[];
+    for (var i = 0; i < spra.length; ++i) {
+    if (spra[i] < min ) {        
+    min = spra[i];
+    mini=i;       
+    }
+}
+for (var i = 0; i < spra.length; ++i) {
+    if (spra[i] === spra[mini] ) {               
+        ar[i]=i;
+        //console.log(ar[i]);                    
+        }        
+    }
+    function najmniejsza(value) {
+        return (value >= 0);
+        }
+        var baba = "[" + ar.filter(najmniejsza)+"]";
+    console.log(ar);
+    console.log(baba);    
+    console.log(min);
+    console.log(mini);     
+    console.log("wartosc najmniejsza: " + min + " na pozycji: " + mini);
+    document.getElementById("sprawdzx16").innerHTML = "na pozycji: " + baba + " a wart najmniejsza to "+ min;
 }
