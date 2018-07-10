@@ -349,3 +349,30 @@ for (var i = 0; i < spra.length; ++i) {
     console.log("wartosc najmniejsza: " + min + " na pozycji: " + mini);
     document.getElementById("sprawdzx16").innerHTML = "na pozycji: " + baba + " a wart najmniejsza to "+ min;
 }
+//zad17
+var tab17=[];
+function tablica17(){    
+    for (var i = 0; i < 10; ++i) {
+        tab17[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab17);
+        document.getElementById("tab17").innerHTML = tab17;
+}
+function spr17(){
+    var spra=tab17;
+    var paramxa=parseFloat(document.getElementById("paramx17a").value); 
+    var paramxb=parseFloat(document.getElementById("paramx17b").value); 
+    var sum=0;
+    var baba;  
+    function suma(value) {
+        return (value >= paramxa && value <= paramxb);        
+        }
+    baba = spra.filter(suma);
+    console.log(baba);
+    for (var i = 0; i < baba.length; ++i) {
+        sum+=baba[i];        
+    }
+    console.log(sum);
+    document.getElementById("sprawdzx17").innerHTML = sum;
+
+}
