@@ -376,3 +376,49 @@ function spr17(){
     document.getElementById("sprawdzx17").innerHTML = sum;
 
 }
+//zad18
+var tab18=[];
+function tablica18(){    
+    for (var i = 0; i < 10; ++i) {
+        tab18[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab18);
+        document.getElementById("tab18").innerHTML = tab18;
+}
+function spr18(){
+    var spra=tab18;
+    var paramxx=parseFloat(document.getElementById("paramx18x").value); 
+    var paramxy=parseFloat(document.getElementById("paramx18y").value); 
+    var sum=0;
+    for (var i = 0; i < spra.length; ++i) {
+        if(i>=paramxx && i<=paramxy){
+        sum+=spra[i]; 
+        }       
+    }
+    console.log(sum);
+    document.getElementById("sprawdzx18").innerHTML = sum;
+}
+//zad20
+var tab20=[];
+function tablica20(){    
+    for (var i = 0; i < 10; ++i) {
+        tab20[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab20);
+        document.getElementById("tab20").innerHTML = tab20;
+}
+function spr20(){
+    var spra=tab20;
+    var paramxn=parseFloat(document.getElementById("paramx20").value);      
+    var sum=0;
+    var ile=0;
+    for (var i = 0; i < spra.length; ++i) {
+        if(spra[i]%paramxn===0){
+        sum+=spra[i];
+        ile++; 
+        }       
+    }
+    console.log(sum);
+    console.log(sum/ile);
+    document.getElementById("sprawdzx20").innerHTML = sum/ile;
+}
