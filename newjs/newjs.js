@@ -422,3 +422,27 @@ function spr20(){
     console.log(sum/ile);
     document.getElementById("sprawdzx20").innerHTML = sum/ile;
 }
+//zad22
+var tab22=[];
+function tablica22(){    
+    for (var i = 0; i < 10; ++i) {
+        tab22[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab22);
+        document.getElementById("tab22").innerHTML = tab22;
+}
+function spr22(){
+    var spra=tab22;
+    var paramxn=parseFloat(document.getElementById("paramx22").value);      
+    var sum=0;
+    for (var i = 0; i < spra.length; ++i) {
+        if(spra[i]===paramxn){
+        sum=sum+spra[i]-paramxn;         
+        }  
+        else{
+            sum+=spra[i];
+        }     
+    }
+    console.log(sum);
+    document.getElementById("sprawdzx22").innerHTML = sum;
+}
