@@ -446,3 +446,32 @@ function spr22(){
     console.log(sum);
     document.getElementById("sprawdzx22").innerHTML = sum;
 }
+//zad23
+var tab23=[];
+function tablica23(){    
+    for (var i = 0; i < 10; ++i) {
+        tab23[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab23);
+        document.getElementById("tab23").innerHTML = tab23;
+}
+function spr23(){
+    var spra=tab23;
+    var paramxs=parseFloat(document.getElementById("paramx23s").value);      
+    var sum=0; 
+    var ile=0;   
+    for (var i = 0; i < spra.length; ++i) {
+        
+        
+            sum+=spra[i];
+            if(sum<=paramxs){
+            ile++;
+            }
+            
+    
+}
+    console.log(sum);
+    console.log(ile);
+    document.getElementById("sprawdzx23").innerHTML = sum;
+    document.getElementById("sprawdzx23s").innerHTML = ile;
+}
