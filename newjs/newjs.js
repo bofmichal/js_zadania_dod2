@@ -460,18 +460,92 @@ function spr23(){
     var paramxs=parseFloat(document.getElementById("paramx23s").value);      
     var sum=0; 
     var ile=0;   
-    for (var i = 0; i < spra.length; ++i) {
-        
-        
+    for (var i = 0; i < spra.length; ++i) {       
             sum+=spra[i];
             if(sum<=paramxs){
             ile++;
-            }
-            
-    
-}
+            }           
+    }
     console.log(sum);
     console.log(ile);
     document.getElementById("sprawdzx23").innerHTML = sum;
     document.getElementById("sprawdzx23s").innerHTML = ile;
+}
+//zad24
+var tab24=[];
+function tablica24(){    
+    for (var i = 0; i < 10; ++i) {
+        tab24[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab24);
+        document.getElementById("tab24").innerHTML = tab24;
+}
+function spr24(){
+    var spra=tab24;
+    var paramxp=1+(0.01*(parseFloat(document.getElementById("paramx24p").value)));    
+    var cham=[];
+    var mam=[];
+    var m=[];
+    for(var i = 0; i < 10; ++i){        
+        if(spra[i]%2==0){
+            m[i]=i;
+            spra[i]=spra[m[i]]*paramxp;
+        }
+        
+       
+        
+            }
+    console.log(spra);
+    console.log(m);
+    document.getElementById("sprawdzx24").innerHTML = spra;
+    /*for(var i = 0; i < 10; ++i){        
+        if(spra[i]%2==0){
+            m[i]=i;
+cham[i]=spra[i]*paramxp;
+        }
+        if(spra[i]%2!==0){
+            mam[i]=spra[i]
+                    }
+        } 
+    console.log(cham);  
+    console.log(mam);
+    console.log(m);
+     /*
+        var mama;      
+        function parzystaa(value) {
+            return (value%2==0);        
+            }     
+        mama = spra.filter(parzystaa);
+        console.log(mama);
+
+        var tata;
+        function nieparzysta(value) {
+            return (value%2!==0);        
+            }        
+        tata = spra.filter(nieparzysta);
+        console.log(tata);
+
+    var baba;      
+    function parzysta(value) {
+        return (value*paramxp);        
+        }     
+    baba = mama.map(parzysta);
+    console.log(baba);
+
+    
+    var janusz=[];
+    janusz=baba+","+tata;
+    console.log(janusz);
+    
+    document.getElementById("sprawdzx24").innerHTML = janusz;
+    //document.getElementById("sprawdzx23s").innerHTML = ile;*/
+}
+//zad25
+var tab25=[];
+function tablica25(){    
+    for (var i = 0; i < 10; ++i) {
+        tab24[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab25);
+        document.getElementById("tab25").innerHTML = tab25;
 }
