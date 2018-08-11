@@ -528,3 +528,29 @@ function spr25(){
     document.getElementById("sprawdzx25").innerHTML = spra;
     
 }
+//zad26
+var tab26=[];
+function tablica26(){    
+    for (var i = 0; i < 10; ++i) {
+        tab26[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab26);
+        document.getElementById("tab26").innerHTML = tab26;
+}
+function spr26(){
+    var spra=tab26;
+    var p26=parseFloat(document.getElementById("paramx26n").value); 
+    for(var i = 0; i < 10; ++i){        
+        //if(i==p26){
+            for(var i = p26; i < 10; i+=p26){
+            spra[i]=spra[i]*0;
+            }
+            
+        //}     
+          
+            }
+            
+console.log(spra);    
+    document.getElementById("sprawdzx26").innerHTML = spra;
+    
+}
