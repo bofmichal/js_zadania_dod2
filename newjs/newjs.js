@@ -540,17 +540,69 @@ function tablica26(){
 function spr26(){
     var spra=tab26;
     var p26=parseFloat(document.getElementById("paramx26n").value); 
-    for(var i = 0; i < 10; ++i){        
-        //if(i==p26){
-            for(var i = p26; i < 10; i+=p26){
+    for(var i = 0; i < 10; ++i){      
+       for(var i = p26; i < 10; i+=p26){
             spra[i]=spra[i]*0;
             }
-            
-        //}     
-          
+                  
             }
             
 console.log(spra);    
     document.getElementById("sprawdzx26").innerHTML = spra;
     
 }
+//zad27
+var tab27=[];
+function tablica27(){    
+    for (var i = 0; i < 10; ++i) {
+        tab27[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab27);
+        document.getElementById("tab27").innerHTML = tab27;
+}
+function spr27(){
+    var spra=tab27;
+    var ilosc = 0;
+    var znalezione=[];     
+    for(var i = 0; i < 10; ++i){      
+       if(spra[i]>spra[i+1]&&spra[i]>spra[i-1]){
+        ilosc++;
+        znalezione[i]=spra[i];
+        function parzysta(value) {
+            return (value % 1 == 0);
+            }                
+        var jan = znalezione.filter(parzysta)
+       }  
+            }
+            console.log(jan);
+console.log(ilosc);
+console.log(znalezione);     
+//console.log(spra);    
+    document.getElementById("sprawdzx27").innerHTML = jan;
+        }
+
+//zad28
+var tab28=[];
+function tablica28(){    
+    for (var i = 0; i < 10; ++i) {
+        tab28[i] = 1 + Math.floor(Math.random() * 20);
+        }
+        console.log(tab28);
+        document.getElementById("tab28").innerHTML = tab28;
+}
+function spr28(){
+    var spra=tab28;
+    var nowa=[];
+    for(var i = 0; i < 10; i+=2){
+nowa[i]=spra[i]+spra[i+1];
+function parzysta(value) {
+    return (value % 1 == 0);
+    }                
+var jan = nowa.filter(parzysta)
+}
+console.log(nowa);
+console.log(jan);
+document.getElementById("sprawdzx28").innerHTML = jan;
+    }
+    
+        
